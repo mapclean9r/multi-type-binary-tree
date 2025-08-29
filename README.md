@@ -20,7 +20,7 @@ A simple Java project that demonstrates how to:
 
 ---
 
-## Example
+## Example output
 
 ```java
 [Node] -> Dinner]
