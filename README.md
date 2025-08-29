@@ -10,7 +10,7 @@ A simple Java project that demonstrates how to:
 ## Features
 
 - `Tree.add(String text)` → inserts a string 
-- `Tree.add(int number)` → inserts a number
+- `Tree.add(Integer number)` → inserts a number
 - Binary conversion: `"hello"` → `01101000 01100101 01101100 01101100 01101111`  
 - Compression: counts how many `1`s occur in each of the 8 bit positions  
 - `Node` stores:
