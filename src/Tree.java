@@ -2,7 +2,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Tree {
     private Node node;
-    private String stringTmp = "";
+    private String nodeOriginalInputTmp = "";
 
     public Tree(String nodeData){
         this.node = new Node(compressBin(convertToBin(nodeData)));
@@ -14,7 +14,7 @@ public class Tree {
     }
 
     public void add(Integer number){
-        this.stringTmp = number.toString();
+        this.nodeOriginalInputTmp = number.toString();
         String text = String.valueOf(number);
         String binConverted = convertToBin(text);
         int[] data = compressBin(binConverted);
@@ -22,7 +22,7 @@ public class Tree {
     }
 
     public void add(String text){
-        this.stringTmp = text;
+        this.nodeOriginalInputTmp = text;
         String binConverted = convertToBin(text);
         int[] data = compressBin(binConverted);
         nodeCreate(data);
@@ -37,6 +37,7 @@ public class Tree {
         System.out.println(prefix + (prefix.isEmpty() ? "" : (isTail ? "└── " : "├── ")) + n);
         Node left = n.getLeft();
         Node right = n.getRight();
+
         if (left != null || right != null) {
             String childPrefix = prefix + (isTail ? "    " : "│   ");
             if (left != null){
@@ -81,11 +82,11 @@ public class Tree {
 
         if (wentLeft){
             parent.setLeft(toInsert);
-            parent.getLeft().setNode(stringTmp);
+            parent.getLeft().setNode(nodeOriginalInputTmp);
         }
         else{
             parent.setRight(toInsert);
-            parent.getRight().setNode(stringTmp);
+            parent.getRight().setNode(nodeOriginalInputTmp);
         }
     }
 

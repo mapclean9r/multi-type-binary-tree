@@ -3,6 +3,7 @@ public class Node {
     private Node left;
     private Node right;
     private final int[] compressedData;
+
     public Node(int[] nodeData){
         this.left = null;
         this.right = null;
