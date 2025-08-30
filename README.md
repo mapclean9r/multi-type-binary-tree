@@ -22,7 +22,7 @@ A simple Java project that demonstrates how to:
 
 ## Example output
 
-```java
+```text
 [Node] -> Dinner]
     ├── [Node] -> Hei]
     │   ├── [Node] -> 5]
